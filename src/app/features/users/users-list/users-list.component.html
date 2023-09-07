@@ -1,0 +1,17 @@
+
+<div class="card-list">
+    <app-card
+    *ngFor="let user of userList;  index as i; trackBy: trackByFn"
+    [fullName]="user.fullName"
+    [email]="user.email"
+    ($delete)="onDeleteUser(user.id!)"
+    ($view)="onViewUser(user.id!)">  
+    </app-card>
+</div>
+
+<!-- <li >
+        
+        
+        <a [routerLink]="['./', user.id]"
+    routerLinkActive="router-link-active" > view </a> <button type="button" (click)="onDeleteUser(user.id!)">delete</button></li>
+</ul> -->

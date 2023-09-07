@@ -1,0 +1,22 @@
+
+<div class="login">
+  <div class="card">
+      <span class="card__title">Sign In</span>
+      <p class="card__content">Log in to experience the full feature of the application.
+    </p>
+    <form class="card__form" (ngSubmit)="onLogin(loginForm)" #loginForm="ngForm">
+      <input
+        title="username input"
+        type="text"
+        name="userName"
+        id=""
+        [(ngModel)]="loginForm.name"
+        #userName="ngModel"
+        ngModel
+        required 
+        placeholder="Username"
+        />
+      <button class="sign-up" [disabled]="!loginForm.valid" type="submit">Sign In</button>
+    </form>
+  </div>
+</div>

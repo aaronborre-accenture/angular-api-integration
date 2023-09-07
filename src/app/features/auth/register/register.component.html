@@ -1,0 +1,28 @@
+
+<div class="login">
+    <div class="card">
+        <span class="card__title">{{!isEdit ? "Sign Up" :"Edit"}}</span>
+        <p class="card__content">{{!isEdit ? "Sign Up to experience the full feature of the application." :"Take a sip of coffee"}}
+      </p>
+      <form class="card__form" [formGroup]="registerForm" (ngSubmit)="onRegister()">
+        <label for="fullName"></label>
+        <input title="full name" type="text" name="" id="fullName" formControlName="fullName" placeholder="Full name">
+    
+        <label for="userName"></label>
+        <input title="user name" type="text" name="" id="userName" formControlName="userName" placeholder="User name">
+    
+        <label for="contactNo"></label>
+        <input title="contact number" type="text" name="" id="contactNo" formControlName="contactNo" placeholder="Contact Number">
+    
+        <label for="email"></label>
+        <input title="email" type="email" name="" id="email" formControlName="email" placeholder="Email">
+    
+        <label for="description"></label>
+        <textarea title="description" id="description" formControlName="description" placeholder="Description"></textarea>
+    
+        <button  class="sign-up"  type="submit" [disabled]="!registerForm.valid">{{!isEdit ? "Sign Up" :"Save"}}</button>
+    </form>
+     
+    </div>
+  </div>
+  
